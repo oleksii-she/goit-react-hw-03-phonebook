@@ -29,8 +29,6 @@ export class Form extends Component {
   };
 
   render() {
-    const { contacts, number, name } = this.state;
-    console.log(number);
     return (
       <FormStyle action="" onSubmit={this.handlerSubmitForm}>
         <Label htmlFor={this.nameId}>

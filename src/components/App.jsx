@@ -54,15 +54,13 @@ export class App extends Component {
   };
 
   render() {
-    const { contacts, filter } = this.state;
-    console.log(contacts);
     return (
       <Conteiner>
         <h1>Phonebook</h1>
         <Form onSubmit={this.getFormData} />
 
         <h2>Contacts</h2>
-        <Filter onChange={this.filterName} value={filter} />
+        <Filter onChange={this.filterName} />
         <ContactsList
           dataList={this.FindContact()}
           onDeleteContact={this.deleteContact}
