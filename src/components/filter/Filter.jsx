@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 
 export const Filter = ({ onChange, value }) => {
   let contactsListId = nanoid();
@@ -9,4 +10,8 @@ export const Filter = ({ onChange, value }) => {
       <input type="text" onChange={onChange} value={value} />
     </label>
   );
+};
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
 };

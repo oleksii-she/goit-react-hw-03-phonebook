@@ -1,17 +1,15 @@
-import { nanoid } from 'nanoid';
+import { ContactsItem } from './contactsItem';
 
-export const ContactsList = ({ dataList }) => {
-  let contactsListId = nanoid();
-
+export const ContactsList = ({ dataList, onDeleteContact }) => {
   return (
     <ul>
-      {dataList.map(el => (
-        <li key={el.id}>
-          <p>
-            {el.name}
-            <span>{el.number}</span>
-          </p>
-        </li>
+      {dataList.map(data => (
+        <ContactsItem
+          key={data.id}
+          name={data.name}
+          number={data.number}
+          onClick={() => onDeleteContact(data.id)}
+        />
       ))}
     </ul>
   );

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
+// import { FormStyle } from './form.styled';
 
-export class ContactForm extends Component {
+export class Form extends Component {
   state = {
     contacts: [],
     filter: '',
