@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
-import { Item } from './contacts.styled';
+import { Item, Button } from './contacts.styled';
 
 export const ContactsItem = ({ name, number, onClick }) => {
   return (
     <Item>
-      {name}: <span>{number}</span> <button onClick={onClick}>Dellete</button>
+      {name}: {number}
+      <Button onClick={onClick}>Dellete</Button>
     </Item>
   );
 };

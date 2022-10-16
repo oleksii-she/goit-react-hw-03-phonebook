@@ -1,14 +1,11 @@
-import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
-
+import { Label, Input } from './filter.styled';
 export const Filter = ({ onChange, value }) => {
-  let contactsListId = nanoid();
-
   return (
-    <label htmlFor="">
+    <Label htmlFor="">
       Find contacts by name
       <input type="text" onChange={onChange} value={value} />
-    </label>
+    </Label>
   );
 };
 
