@@ -24,11 +24,12 @@ export class Form extends Component {
     this.reset();
   };
 
-  reset = e => {
+  reset = () => {
     this.setState({ name: '', number: '' });
   };
 
   render() {
+    const { name, number } = this.state;
     return (
       <FormStyle action="" onSubmit={this.handlerSubmitForm}>
         <Label htmlFor={this.nameId}>
@@ -40,6 +41,7 @@ export class Form extends Component {
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             id={this.tagInputId}
             required
+            value={name}
             onChange={this.handlerInputName}
           />
         </Label>
@@ -52,6 +54,7 @@ export class Form extends Component {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             id={this.tagInputId}
             required
+            value={number}
             onChange={this.handlerInputName}
           />
         </Label>
